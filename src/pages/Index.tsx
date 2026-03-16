@@ -11,7 +11,6 @@ import heroCity from "@/assets/hero-city.jpg";
 import { hubs } from "@/data/hubs";
 
 const Index = () => {
-  const [cmdOpen, setCmdOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
