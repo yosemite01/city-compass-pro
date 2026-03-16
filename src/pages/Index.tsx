@@ -6,6 +6,7 @@ import StatsBar from "@/components/StatsBar";
 import CategoryGrid from "@/components/CategoryGrid";
 import HubCard from "@/components/HubCard";
 import CommandPalette from "@/components/CommandPalette";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import heroCity from "@/assets/hero-city.jpg";
 import { hubs } from "@/data/hubs";
 
