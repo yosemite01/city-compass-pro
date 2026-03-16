@@ -1,13 +1,16 @@
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import SearchBar from "@/components/SearchBar";
 import StatsBar from "@/components/StatsBar";
 import CategoryGrid from "@/components/CategoryGrid";
 import HubCard from "@/components/HubCard";
-import MapExplorer from "@/components/MapExplorer";
 import CommandPalette from "@/components/CommandPalette";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import heroCity from "@/assets/hero-city.jpg";
 import { hubs } from "@/data/hubs";
+
+const MapExplorer = lazy(() => import("@/components/MapExplorer"));
 
 const Index = () => {
 
@@ -80,7 +83,25 @@ const Index = () => {
             <h2 className="text-heading text-foreground">Explore the Map</h2>
             <span className="text-label text-primary">{hubs.length} hubs worldwide</span>
           </div>
-          <MapExplorer />
+          <ErrorBoundary fallback={
+            <div className="w-full h-[500px] md:h-[600px] rounded-xl border border-border bg-card/50 flex items-center justify-center">
+              <div className="text-center space-y-3">
+                <p className="text-heading text-foreground">3D Globe</p>
+                <p className="text-body text-muted-foreground">Loading — please refresh if needed</p>
+              </div>
+            </div>
+          }>
+            <Suspense fallback={
+              <div className="w-full h-[500px] md:h-[600px] rounded-xl border border-border bg-card/50 flex items-center justify-center">
+                <div className="text-center space-y-3">
+                  <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto" />
+                  <p className="text-label text-muted-foreground">Loading 3D Globe...</p>
+                </div>
+              </div>
+            }>
+              <MapExplorer />
+            </Suspense>
+          </ErrorBoundary>
         </section>
 
         {/* Featured Hubs */}

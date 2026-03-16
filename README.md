@@ -1,100 +1,73 @@
-# City Compass Pro
+# Welcome to your Lovable project
 
-**City Compass Pro** is a premium city exploration web app built with React + TypeScript + Vite. Discover verified global hubs (coworking, nightlife, art, cafes, hotels, fitness), search by categories, and navigate curated location pages in a modern, mobile-first experience.
+## Project info
 
-## 🚀 Why this app is world-class
+**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
-- Fast, responsive, accessible UI with Tailwind + shadcn components
-- Interactive hero search, hub cards, category grid, and map explorer
-- Data-driven hub detail pages with location, services, verified status, and live reviews
-- Lightweight architecture optimized for rapid prototyping and production deployment
+## How can I edit this code?
 
-## ✨ Core features
+There are several ways of editing your application.
 
-- Global city hub discovery (142+ cities model)
-- Search and filter by category directly from hero area
-- Featured hub cards, rating, visitors, and distance
-- Hub detail route (`/hub/:slug`) with full hub metadata
-- Tailwind-based responsive layout with sleek modern design
-- Toasts and command palette interactions
+**Use Lovable**
 
-## 📦 Tech stack
+Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
 
-- **Vite** (blazing-fast dev + production builds)
-- **React** + **TypeScript**
-- **React Router** for client-side navigation
-- **Framer Motion** for subtle UI animations
-- **shadcn/ui** components for design system consistency
-- **Tailwind CSS** for style utilities
-- **React Query** for scalable data state (already configured)
+Changes made via Lovable will be committed automatically to this repo.
 
-## 🧭 Repository structure
+**Use your preferred IDE**
 
-- `src/main.tsx` — App entrypoint
-- `src/App.tsx` — routing + provider setup
-- `src/pages/Index.tsx` — home view with hero, stats, categories, map, featured hubs
-- `src/pages/HubDetail.tsx` — single hub detail page
-- `src/data/hubs.ts` — hub fixtures and structured hub data
-- `src/components/` — reusable UI components (Navbar, HubCard, SearchBar, etc.)
-- `src/components/ui/` — shadcn UI primitives and shared components
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-## ▶️ Quick start (local development)
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-```bash
-cd city-compass-pro
-npm install
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-Then open http://localhost:5173.
+**Edit a file directly in GitHub**
 
-## ✅ Build for production
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-```bash
-npm run build
-npm run preview
-```
+**Use GitHub Codespaces**
 
-## 🔧 Key conventions
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-- Use **absolute imports** from `@/...` (configured in `tsconfig.json`)
-- Keep data in `src/data` and UI layout in `src/components`
-- Add new routes in `src/App.tsx` before the catch-all `*` route
+## What technologies are used for this project?
 
-## 🧪 Tests
+This project is built with:
 
-This project uses Vitest.
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-```bash
-npm run test
-```
+## How can I deploy this project?
 
-## 🎨 Design system
+Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
 
-The app uses shadcn UI with custom utilities in `src/components/ui/*` and consistent CSS variables through Tailwind.
+## Can I connect a custom domain to my Lovable project?
 
-## 📌 Deployment
+Yes, you can!
 
-Deploy to any static host (Vercel, Netlify, Cloudflare Pages). Build output is in `dist/`.
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Example Vercel command:
-
-```bash
-vercel --prod
-```
-
-## 🤝 Contributing
-
-1. Fork the repo
-2. Create a feature branch (`git checkout -b feature/<name>`)
-3. Code, lint, and test
-4. Open a PR with summary and smoke-test steps
-
-## 📝 Notes for maintainers
-
-- Add new hubs to `src/data/hubs.ts` and they automatically show in the listing.
-- For new detail pages, add a route in `src/App.tsx` and ensure slug mapping uses `hubs` dataset.
-
----
-
-Built for rapid prototyping and production-grade city marketplace experiences.
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
