@@ -1,5 +1,5 @@
 import { useRef, useMemo, useState, useCallback } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame, extend } from "@react-three/fiber";
 import { OrbitControls, Html, Stars } from "@react-three/drei";
 import * as THREE from "three";
 import { hubs } from "@/data/hubs";
