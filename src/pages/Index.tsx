@@ -1,13 +1,15 @@
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import SearchBar from "@/components/SearchBar";
 import StatsBar from "@/components/StatsBar";
 import CategoryGrid from "@/components/CategoryGrid";
 import HubCard from "@/components/HubCard";
-import MapExplorer from "@/components/MapExplorer";
 import CommandPalette from "@/components/CommandPalette";
 import heroCity from "@/assets/hero-city.jpg";
 import { hubs } from "@/data/hubs";
+
+const MapExplorer = lazy(() => import("@/components/MapExplorer"));
 
 const Index = () => {
 
