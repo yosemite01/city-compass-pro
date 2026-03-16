@@ -2,11 +2,16 @@ import { Search } from "lucide-react";
 import { motion } from "framer-motion";
 
 const SearchBar = () => {
+  const openPalette = () => {
+    document.dispatchEvent(new KeyboardEvent("keydown", { key: "k", metaKey: true }));
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: [0.2, 0.8, 0.2, 1], delay: 0.3 }}
+      onClick={openPalette}
       className="glass px-4 py-3 flex items-center gap-3 w-full max-w-xl mx-auto cursor-pointer group"
     >
       <Search className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors duration-200" />

@@ -1,7 +1,9 @@
 import { MapPin, Star, Users } from "lucide-react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 interface HubCardProps {
+  slug: string;
   name: string;
   category: string;
   city: string;
@@ -12,12 +14,15 @@ interface HubCardProps {
   image: string;
 }
 
-const HubCard = ({ name, category, city, rating, visitors, distance, verified, image }: HubCardProps) => {
+const HubCard = ({ slug, name, category, city, rating, visitors, distance, verified, image }: HubCardProps) => {
+  const navigate = useNavigate();
+
   return (
     <motion.div
       whileHover={{ y: -2 }}
       transition={{ duration: 0.2, ease: [0.2, 0.8, 0.2, 1] }}
-      className="card-surface cursor-pointer group overflow-hidden"
+      onClick={() => navigate(`/hub/${slug}`)}
+      className="card-surface cursor-pointer group overflow-hidden h-full"
     >
       <div className="relative h-36 -mx-4 -mt-4 mb-3 overflow-hidden rounded-t-xl">
         <img
