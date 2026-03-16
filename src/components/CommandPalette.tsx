@@ -87,5 +87,4 @@ const CommandPalette = () => {
   );
 };
 
-export { CommandPalette, type CommandPalette };
 export default CommandPalette;

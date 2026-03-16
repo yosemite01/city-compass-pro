@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Star, MapPin, Clock, Phone, Users, CheckCircle, ExternalLink } from "lucide-react";
+import { ArrowLeft, Star, MapPin, Clock, Phone, Users, CheckCircle } from "lucide-react";
 import { hubs } from "@/data/hubs";
 import Navbar from "@/components/Navbar";
 

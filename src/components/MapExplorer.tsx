@@ -1,10 +1,9 @@
-import { useEffect, useRef } from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { hubs } from "@/data/hubs";
 import { useNavigate } from "react-router-dom";
-import { Star, MapPin } from "lucide-react";
+import { Star } from "lucide-react";
 
 // Fix default marker icons
 delete (L.Icon.Default.prototype as any)._getIconUrl;
