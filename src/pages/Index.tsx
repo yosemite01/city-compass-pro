@@ -82,7 +82,16 @@ const Index = () => {
             <h2 className="text-heading text-foreground">Explore the Map</h2>
             <span className="text-label text-primary">{hubs.length} hubs worldwide</span>
           </div>
-          <MapExplorer />
+          <Suspense fallback={
+            <div className="w-full h-[500px] md:h-[600px] rounded-xl border border-border bg-card/50 flex items-center justify-center">
+              <div className="text-center space-y-3">
+                <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto" />
+                <p className="text-label text-muted-foreground">Loading 3D Globe...</p>
+              </div>
+            </div>
+          }>
+            <MapExplorer />
+          </Suspense>
         </section>
 
         {/* Featured Hubs */}
