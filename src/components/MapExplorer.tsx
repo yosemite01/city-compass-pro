@@ -117,9 +117,7 @@ function ConnectionLines() {
       {lines.map((points, i) => {
         const geometry = new THREE.BufferGeometry().setFromPoints(points);
         return (
-          <line key={i} geometry={geometry}>
-            <lineBasicMaterial color="#3b82f6" transparent opacity={0.08} />
-          </line>
+          <primitive key={i} object={new THREE.Line(geometry, new THREE.LineBasicMaterial({ color: "#3b82f6", transparent: true, opacity: 0.08 }))} />
         );
       })}
     </>
