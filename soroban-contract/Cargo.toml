@@ -1,0 +1,14 @@
+[package]
+name = "city_compass_contract"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "city_compass_contract"
+crate-type = ["cdylib"]
+
+[dependencies]
+soroban-sdk = { version = "0.28.0", default-features = false, features = ["std"] }
+
+[profile.release]
+opt-level = "z"
